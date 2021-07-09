@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "preferGlobal": true,
+  "bin": "./server.js",
   "dependencies": {
     "chalk": "^4.1.1",
     "clipboardy": "^2.3.0",
