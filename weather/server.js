@@ -1,17 +1,21 @@
 const express = require('express')
-const process = require('process')
+
 const os = require('os')
 const app = express()
 const fetch = require("node-fetch");
 const { request } = require('https');
+ require('dotenv').config()
+
+
+//${API_key}
+const city_name= 'haldwani'
+
+const API_key = process.env.API_KEY
 
 
 
-const city_name = process.argv[2]
-console.log(city_name);
-const API_key = "c696cafc9907d2abdf758afa97b951fc"
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_key}`
-
+console.log(url);
 
 app.get('/app' ,async (req , res)=>{
 

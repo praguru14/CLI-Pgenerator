@@ -1,4 +1,5 @@
 let request = require('request');
+const process = require('dotenv').config()
 
 let apiKey = 'c696cafc9907d2abdf758afa97b951fc';
 let city = 'haldwani';
