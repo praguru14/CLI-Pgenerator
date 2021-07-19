@@ -1,4 +1,4 @@
-const Expenses = [
+const Dummy_Expense = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -21,4 +21,4 @@ const Expenses = [
   ];
 
 
-  export default Expenses
+  export default Dummy_Expense 

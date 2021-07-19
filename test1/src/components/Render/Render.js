@@ -24,7 +24,7 @@ const [filteredDate,setDate]= useState('2020')
         <Card className="render">
         <ExpensesFilter selected={filteredDate} onYearValue={fliterChangeHandler}/>
               {props.items.map((Expense)=>{
-      return  <ExpenseItem date={Expense.date} title = {Expense.title}  amount={Expense.amount}/>
+      return  <ExpenseItem key={Expense.id} date={Expense.date} title = {Expense.title}  amount={Expense.amount}/>
     })}
         </Card>
         </div>

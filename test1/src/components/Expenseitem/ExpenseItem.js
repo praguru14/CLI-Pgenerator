@@ -9,13 +9,13 @@ function ExpenseItem(props) {
 
  
 
-  const [title, setTitle] = useState(props.title)
+//   const [title, setTitle] = useState(props.title)
 
-const click =  () => {
-   setTitle('Hello')
-  console.log(title);
+// const click =  () => {
+//    setTitle('Hello')
+//   console.log(title);
     
-}
+// }
 
   return (
    
@@ -23,9 +23,9 @@ const click =  () => {
     
      <ExpenseDate date = {props.date}/>
       <div className='expense-item__description'>
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className='expense-item__price'>{props.amount}</div>
-        <button onClick={click}>Click</button>
+      
       </div>
      
     </Card>
