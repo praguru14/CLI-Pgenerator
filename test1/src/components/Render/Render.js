@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import Card from '../Card/Card'
 import ExpensesFilter from '../ExpenseFilter/ExpenseFilter'
-import ExpenseItem from '../Expenseitem/ExpenseItem'
 // import Expenses from '../../App'
+import ExpenseList from '../ExpenseList/ExpenseList'
 import './Render.css'
 
 
@@ -13,19 +13,28 @@ import './Render.css'
  
 function Render(props) {
 
-const [filteredDate,setDate]= useState('2020')
+const [filteredDate,setDate]= useState('2021')
 
  const fliterChangeHandler = res=>{
     setDate(res)
-    console.log(filteredDate);
+    
  }
+
+const filteredYear = props.items.filter(expense=>{
+    return expense.date.getFullYear().toString() === filteredDate
+});
+
+
+
+
+
     return (
       <div>
         <Card className="render">
         <ExpensesFilter selected={filteredDate} onYearValue={fliterChangeHandler}/>
-              {props.items.map((Expense)=>{
-      return  <ExpenseItem key={Expense.id} date={Expense.date} title = {Expense.title}  amount={Expense.amount}/>
-    })}
+           
+
+    <ExpenseList item={filteredYear}/>
         </Card>
         </div>
        
